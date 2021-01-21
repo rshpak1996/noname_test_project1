@@ -1,11 +1,10 @@
 from .base_page import BasePage
-from .locators import BasePageLocators, AddRemoveElementsLocators
+from .locators import AddRemoveElementsLocators
 import time
 
 class Add_Remove_Elements(BasePage):
     def go_to(self):
-        link = self.browser.find_element(*BasePageLocators.ADD_REMOVE_ELEMENTS_LINK)
-        link.click()
+        self.browser.find_element(*AddRemoveElementsLocators.ADD_REMOVE_ELEMENTS_LINK).click()
 
     def press_the_add_element_button(self):
         self.browser.find_element(*AddRemoveElementsLocators.ADD_ELEMENT_BUTTON).click()
