@@ -139,4 +139,5 @@ cython_debug/
 
 .selenium_env.bat
 .vscode
- .gitignore 
+ .gitignore
+activate.bat
