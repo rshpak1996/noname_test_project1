@@ -3,6 +3,7 @@ from pages.base_page import BasePage
 from pages.page_add_remove_elements import Add_Remove_Elements
 from pages.page_basic_auth import Basic_Auth
 from pages.page_broken_images import BrokenImages
+from pages.page_checkboxes import Checkboxes
 
 
 # pytest -s -v herokuapp_test.py
@@ -32,3 +33,11 @@ def test_broken_images(browser):
     page.open()
     page.go_to()
     page.is_image_broken()
+
+# pytest -s -v herokuapp_test.py::test_checkboxes
+def test_checkboxes(browser):
+    page = Checkboxes(browser)
+    page.open()
+    page.go_to()
+    page.find_and_click_empy_checkbox()
+    page.find_and_click_checked_checkbox()

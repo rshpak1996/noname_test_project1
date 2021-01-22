@@ -14,3 +14,8 @@ class BrokenImagesLocators():
     IMAGE1 = (By.CSS_SELECTOR, 'div.example > img:nth-child(2)')
     IMAGE2 = (By.CSS_SELECTOR, 'div.example > img:nth-child(3)')
     IMAGE3 = (By.CSS_SELECTOR, 'div.example > img:nth-child(4)')
+
+class CheckboxesLocators():
+    CHECKBOXES_LINK = (By.CSS_SELECTOR, '[href="/checkboxes"]')
+    EMPTY_CHECKBOX = (By.CSS_SELECTOR, '#checkboxes > input:nth-child(1)')
+    CHECKED_CHECKBOX = (By.CSS_SELECTOR, '#checkboxes > input:nth-child(3)')
