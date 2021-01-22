@@ -19,3 +19,7 @@ class CheckboxesLocators():
     CHECKBOXES_LINK = (By.CSS_SELECTOR, '[href="/checkboxes"]')
     EMPTY_CHECKBOX = (By.CSS_SELECTOR, '#checkboxes > input:nth-child(1)')
     CHECKED_CHECKBOX = (By.CSS_SELECTOR, '#checkboxes > input:nth-child(3)')
+
+class ContextMenuLocators():
+    CONTEXT_MENU_LINK = (By.CSS_SELECTOR, '[href="/context_menu"]')
+    CONTEXT_MENU_FIELD = (By.CSS_SELECTOR, '[oncontextmenu="displayMessage()"]')

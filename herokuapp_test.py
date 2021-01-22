@@ -4,6 +4,9 @@ from pages.page_add_remove_elements import Add_Remove_Elements
 from pages.page_basic_auth import Basic_Auth
 from pages.page_broken_images import BrokenImages
 from pages.page_checkboxes import Checkboxes
+from pages.page_context_menu import ContextMenu
+
+from pages.locators import ContextMenuLocators
 
 
 # pytest -s -v herokuapp_test.py
@@ -41,3 +44,11 @@ def test_checkboxes(browser):
     page.go_to()
     page.find_and_click_empy_checkbox()
     page.find_and_click_checked_checkbox()
+
+# pytest -s -v herokuapp_test.py::test_context_menu
+def test_context_menu(browser):
+    page = ContextMenu(browser)
+    page.open()
+    page.go_to()
+    page.should_be_context_menu_field()
+    page.open_context_menu()
