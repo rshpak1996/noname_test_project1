@@ -1,7 +1,9 @@
-from pages.base_page import BasePage
-from pages.page_basic_auth import Basic_Auth
-from pages.page_add_remove_elements import Add_Remove_Elements
 import pytest
+from pages.base_page import BasePage
+from pages.page_add_remove_elements import Add_Remove_Elements
+from pages.page_basic_auth import Basic_Auth
+from pages.page_broken_images import BrokenImages
+
 
 # pytest -s -v herokuapp_test.py
 
@@ -24,3 +26,9 @@ def test_add_remove_elements(browser):
 #     page.sign_in()
 #     page.should_see_congratulations_text()
 
+# pytest -s -v herokuapp_test.py::test_broken_images
+def test_broken_images(browser):
+    page = BrokenImages(browser)
+    page.open()
+    page.go_to()
+    page.is_image_broken()
